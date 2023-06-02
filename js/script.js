@@ -10,8 +10,22 @@ $(function() {
   $("p").slideDown(1000);
    */
 
+  /** 
   // Moving Elements
   $(".blue-box").animate({
     "margin-left": "+=200px"
   }, 1000, "linear");
+  */
+
+  // Custom Animations
+  $(".blue-box").animate({
+    "margin-left": "200px",
+    "height": "50px",
+    "width": "50px",
+    "margin-top": "25px"
+  }, 1000);
+
+  $("p").animate({
+    "font-size": "20px"
+  }, 1000);
 });
