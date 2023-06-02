@@ -17,6 +17,8 @@ $(function() {
   }, 1000, "linear");
   */
 
+  
+  /** 
   // Custom Animations
   $(".blue-box").animate({
     "margin-left": "200px",
@@ -28,4 +30,10 @@ $(function() {
   $("p").animate({
     "font-size": "20px"
   }, 1000);
+  */
+
+  // Custom Animations
+  $(".red-box").fadeTo(1000, 0.2);
+  $(".green-box").delay(1000).fadeTo(1000, 0.5);
+  $(".blue-box").delay(2000).fadeTo(1000, 0.8);
 });
