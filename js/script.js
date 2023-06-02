@@ -61,6 +61,7 @@ $(function() {
   $("p:first, li:last, li:odd").css("background-color", "rgba(180, 180, 30, 0.8)")
   */
 
+  /**
   // jQuery Methods for Traversal
   //$("#list").find("li").css("background-color", "rgba(180, 180, 30, 0.8)")
   //$("#list").children("li").css("background-color", "rgba(180, 180, 30, 0.8)")
@@ -69,4 +70,20 @@ $(function() {
   //$("#list").siblings(":header").css("background-color", "rgba(180, 180, 30, 0.8)")
   //$("#list").prev().css("background-color", "rgba(180, 180, 30, 0.8)")
   $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)")
+  */
+
+  // jQuery Methods for Filtering
+  //$("#list").find("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("#list").children("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("li").filter(function(index) {
+  //  return index % 3 === 1;
+  //}).css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("li").first().css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("li").last().css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("li").eq(-2).css("background-color", "rgba(180, 180, 30, 0.8)") // It selects backwards 
+  //$("li").not(":first").css("background-color", "rgba(180, 180, 30, 0.8)")
+  //$("li").not("#list ul li").css("background-color", "rgba(180, 180, 30, 0.8)")
+  $("li").not(function(index) {
+    return index % 3 === 1;
+  }).css("background-color", "rgba(180, 180, 30, 0.8)")
 });
