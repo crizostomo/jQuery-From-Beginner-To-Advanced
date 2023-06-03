@@ -89,6 +89,7 @@ $(function() {
   }).css("background-color", "rgba(180, 180, 30, 0.8)")
   */
 
+  /**
   // Adding new Elements to the DOM
   //$("ul ul:first").append("<li> I'm gonna be the last sub-item");
   //$("<li> I'm gonna be the last item</li>").appendTo($("ul ul:first")); // Same result as the line above
@@ -104,4 +105,18 @@ $(function() {
 
   $(".blue-box").before($(".red-box"));
   $("p").after($("#list"));
+  */
+
+  // Replacing Elements and Content
+  //$("li").replaceWith("<li>Replaced.</li>")
+  //$("li").replaceWith(function(){
+  //  return "<li>Replaced with function</li>"
+  //});
+
+  //var firstListItem = $("li.first");
+  //$("p").replaceWith(firstListItem);
+
+  //$(".red-box, .blue-box").replaceWith("<div class='green-box'>More Green</div>")
+
+  $("<div class='green-box'>More Green!</div>").replaceAll(".red-box, .blue-box");
 });
