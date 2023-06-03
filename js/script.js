@@ -72,6 +72,7 @@ $(function() {
   $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)")
   */
 
+  /**
   // jQuery Methods for Filtering
   //$("#list").find("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)")
   //$("#list").children("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)")
@@ -86,4 +87,21 @@ $(function() {
   $("li").not(function(index) {
     return index % 3 === 1;
   }).css("background-color", "rgba(180, 180, 30, 0.8)")
+  */
+
+  // Adding new Elements to the DOM
+  //$("ul ul:first").append("<li> I'm gonna be the last sub-item");
+  //$("<li> I'm gonna be the last item</li>").appendTo($("ul ul:first")); // Same result as the line above
+  //$("ul ul:first").prepend("<li> I'm gonna be the first sub-item");
+  //$("ul ul").prepend("<li> I'm gonna be the first sub-item");
+  //$("<li> I'm gonna be the first item</li>").prependTo($("ul ul")); // Same result as the line above
+  //$("<h4> Dev Developing</h4>").prependTo($("#content"));
+  //$(".red-box").after("<div class='red-box'> Another Red </div>");
+  //$(".blue-box").before("<div class='blue-box'> Another Blue </div>");
+  //$(".blue-box").before(function() {
+  //  return $("<div class='blue-box'> Blue 2 </div>")
+  //});
+
+  $(".blue-box").before($(".red-box"));
+  $("p").after($("#list"));
 });
