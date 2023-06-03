@@ -107,6 +107,7 @@ $(function() {
   $("p").after($("#list"));
   */
 
+  /**
   // Replacing Elements and Content
   //$("li").replaceWith("<li>Replaced.</li>")
   //$("li").replaceWith(function(){
@@ -119,4 +120,17 @@ $(function() {
   //$(".red-box, .blue-box").replaceWith("<div class='green-box'>More Green</div>")
 
   $("<div class='green-box'>More Green!</div>").replaceAll(".red-box, .blue-box");
+  */
+
+  // Removing Elements and Content
+  //$("li").remove();
+  //$("form").children().not("input:text, textarea, br").remove();
+
+  //var detachedListItem = $("li").detach();
+  //$("#content").append(detachedListItem);
+
+  //$("p:first").empty();
+
+  $(".red-box, .blue-box, .green-box").empty();
+
 });
