@@ -215,6 +215,7 @@ $(function() {
   $(".dummy").removeClass("dummy").addClass("green-box");
   */
 
+  /**
   // Changing the Data of an Element
   var gallery = $(".gallery");
   var images = [
@@ -231,5 +232,18 @@ $(function() {
 
   var firstPar = $("p.first");
   console.log(firstPar.data("mydata"));
+  */
+
+  // Retrieving and Changing the Content of an Element
+  // text(), html()
+  var firstPar = $("p:first");
+  console.log(firstPar.text());
+  console.log(firstPar.html());
+  console.log($("p").html());
+
+  //firstPar.text("<strong>Hello</strong> World!")
+  //firstPar.html("<strong>Hello</strong> World!")
+
+  firstPar.html(firstPar.html() + " This was just appended");
 
 });
