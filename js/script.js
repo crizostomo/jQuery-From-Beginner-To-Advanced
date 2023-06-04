@@ -175,6 +175,7 @@ $(function() {
   }, 2000);
   */
 
+  /**
   // Changing the CSS Properties of Elements
   $(".gallery").css("display", "none");
 
@@ -191,5 +192,23 @@ $(function() {
   console.log(properties["font-size"]);
 
   redBox.css("user-select", "none");
+  */
 
+  // Adding or Removing CSS Classes
+  //$("a").addClass("fancy-link");
+  //$("p:first").addClass("large emphasize");
+//
+  //$("li li").addClass(function(index) {
+  //  $(this).addClass("item-" + index);
+  //});
+//
+  //$("div").addClass(function(index, currentClass) {
+  //  if (currentClass === "dummy") {
+  //    return "red-box";
+  //  }
+  //});
+//
+  //$(".red-box").removeClass("red-box").addClass("blue-box");
+
+  $(".dummy").removeClass("dummy").addClass("green-box");
 });
