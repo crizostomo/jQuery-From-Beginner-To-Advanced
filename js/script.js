@@ -248,6 +248,7 @@ $(function() {
   firstPar.html(firstPar.html() + " This was just appended");
   */
 
+  /**
   // Adding Click Handlers
   $("#btn-click").click(function(event) {
     console.log(event);
@@ -258,5 +259,15 @@ $(function() {
     $(this).fadeTo(500, 0.5);
   });
   $(".red.box").click();
+  */
+
+  // Adding Hover Handlers
+  $("#btn-hover").hover(function() {
+    alert("Button was hovered")
+  });
+
+  $(".green-box").hover(function() {
+    $(this).text("I was hovered");
+  });
 
 });
