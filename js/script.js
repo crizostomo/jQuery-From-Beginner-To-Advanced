@@ -155,15 +155,16 @@ $(function() {
   console.log(rangeInput.val());
   */
 
-  /**
-  // Coding Activity: Creating an Image Slideshow ********CHALLENGE********
-  var galleryImage = $(".gallery").find("img").first();
   var images = [
     "images/laptop-mobile_small.jpg",
     "images/laptop-on-table_small.jpg",
     "images/people-office-group-team_small.jpg",
   ];
 
+  /**
+  // Coding Activity: Creating an Image Slideshow ********CHALLENGE********
+  var galleryImage = $(".gallery").find("img").first();
+  
   var i = 0;
   setInterval(function() {
     i = (i + 1) % images.length; // 0,1,2,0,1,2...
@@ -218,11 +219,6 @@ $(function() {
   /**
   // Changing the Data of an Element
   var gallery = $(".gallery");
-  var images = [
-    "images/laptop-mobile_small.jpg",
-    "images/laptop-on-table_small.jpg",
-    "images/people-office-group-team_small.jpg",
-  ];
   gallery.data("images", images);
   console.log(gallery.data("images"));
   gallery.data("name", "The Awesome Gallery");
@@ -272,6 +268,8 @@ $(function() {
   });
   */
 
+
+  /**
   // Adding MouseEnter & MouseLeave Handlers
   var blueBox = $(".blue-box");
   //blueBox.mouseenter(function() {
@@ -286,6 +284,21 @@ $(function() {
     $(this).stop().fadeTo(500, 0.7);
   }, function() {
     $(this).stop().fadeTo(500, 1);
+  });
+  */
+
+  // Adding the Same Handler for Multiple Events
+  // .on("click", function() {....})
+  $("html").on("click keydown", function() {
+    console.log("Mouse was clicked");
+  });
+
+  var i = 0;
+  $(".gallery").find("img").on("click", function() {
+    i = (i + 1) % images.length;
+    $(this).fadeOut(function() {
+      $(this).attr("src", images[i]).fadeIn();
+    });
   });
 
 
