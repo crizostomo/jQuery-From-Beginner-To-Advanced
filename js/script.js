@@ -303,6 +303,7 @@ $(function() {
   });
   */
 
+  /**
   // Modularizing Event Handlers (No More Inline Functions)
   function logEvent() {
     console.log("Mouse was clicked");
@@ -320,5 +321,21 @@ $(function() {
       $(this).attr("src", images[i]).fadeIn();
     });
   }
+  */
+
+  // Delegated Events
+  //$("p").click(function() {
+  //  $(this).slideUp();
+  //});
+  //$("#content").append("<p>This was added</p>");
+
+  $("#content").on("click", "p", function() {
+    $(this).slideUp();
+  });
+  $("#content").append("<p>This was added</p>");
+
+  $("body").on("mouseenter", "li", function() {
+    $(this).css("color", "#666");
+  });  
 
 });
