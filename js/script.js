@@ -381,6 +381,7 @@ $(function() {
   });
   */
 
+  /**
   // Handling KeyDown & KeyUp Events
   $("html").keydown(function(event) { // TO SEE THE EVENT THAT IS BEING EXHIBITED IN THE CONSOLE
     console.log(event.which);
@@ -394,6 +395,25 @@ $(function() {
       }, 50);
     }
   });
+  */
 
+  // The Focus & Blur Events
+  var inputFields = $("input:text, input:password, textarea");
+  inputFields.focus(function() {
+    $(this).css("box-shadow", "0 0 4px #666");
+  });
+
+  inputFields.blur(function() {
+    $(this).css("box-shadow", "none");
+  });
+
+  $("#name").blur(function() {
+    var text = $(this).val();
+    if (text.length < 3) {
+      $(this).css("box-shadow", "0 0 4px #811");
+    } else {
+      $(this).css("box-shadow", "0 0 4px #181");
+    }
+  });
 
 });
