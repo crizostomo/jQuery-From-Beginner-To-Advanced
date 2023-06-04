@@ -122,6 +122,7 @@ $(function() {
   $("<div class='green-box'>More Green!</div>").replaceAll(".red-box, .blue-box");
   */
 
+  /**
   // Removing Elements and Content
   //$("li").remove();
   //$("form").children().not("input:text, textarea, br").remove();
@@ -132,5 +133,23 @@ $(function() {
   //$("p:first").empty();
 
   $(".red-box, .blue-box, .green-box").empty();
+  */
 
+  // Manipulating Attributes and Properties
+  // attr(), prop(), val()
+  //var specialLink = $("#special-link");
+  //console.log(specialLink.attr("href"));
+
+  //specialLink.attr("href", "http://google.com");
+
+  //var checkbox = $("input:checkbox");
+  //console.log(checkbox.prop("checked"));
+  //console.log(checkbox.attr("checked"));
+
+  var textInput = $("input:text");
+  textInput.val("Text 2")
+  console.log(textInput.val());
+
+  var rangeInput = $("input[type'range']");
+  console.log(rangeInput.val());
 });
