@@ -287,6 +287,7 @@ $(function() {
   });
   */
 
+  /**
   // Adding the Same Handler for Multiple Events
   // .on("click", function() {....})
   $("html").on("click keydown", function() {
@@ -300,6 +301,24 @@ $(function() {
       $(this).attr("src", images[i]).fadeIn();
     });
   });
+  */
 
+  // Modularizing Event Handlers (No More Inline Functions)
+  function logEvent() {
+    console.log("Mouse was clicked");
+  }
+
+  $("html").on("click keydown", logEvent);
+
+  var i = 0;
+  var galleryImage =  $(".gallery").find("img");
+  galleryImage.on("click", switchImage);
+
+  function switchImage() {
+    i = (i + 1) % images.length;
+    $(this).fadeOut(function() {
+      $(this).attr("src", images[i]).fadeIn();
+    });
+  }
 
 });
