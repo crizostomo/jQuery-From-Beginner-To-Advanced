@@ -155,6 +155,7 @@ $(function() {
   console.log(rangeInput.val());
   */
 
+  /**
   // Coding Activity: Creating an Image Slideshow ********CHALLENGE********
   var galleryImage = $(".gallery").find("img").first();
   var images = [
@@ -172,5 +173,23 @@ $(function() {
     });
     console.log(galleryImage.attr("src"));
   }, 2000);
+  */
+
+  // Changing the CSS Properties of Elements
+  $(".gallery").css("display", "none");
+
+  var redBox = $(".red-box");
+  console.log(redBox.css("width"));
+  console.log(redBox.width);
+
+  redBox.css("background-color", "transparent");
+  $("p").css("font-size", "18px")
+  redBox.css("width", "+=20px")
+
+  var properties = $("p").css(["font-size", "line-height", "color"]);
+  console.log(properties);
+  console.log(properties["font-size"]);
+
+  redBox.css("user-select", "none");
 
 });
