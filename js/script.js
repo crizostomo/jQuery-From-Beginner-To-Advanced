@@ -261,6 +261,7 @@ $(function() {
   $(".red.box").click();
   */
 
+  /**
   // Adding Hover Handlers
   $("#btn-hover").hover(function() {
     alert("Button was hovered")
@@ -269,5 +270,23 @@ $(function() {
   $(".green-box").hover(function() {
     $(this).text("I was hovered");
   });
+  */
+
+  // Adding MouseEnter & MouseLeave Handlers
+  var blueBox = $(".blue-box");
+  //blueBox.mouseenter(function() {
+  //  $(this).stop().fadeTo(500, 0.5);
+  //});
+  //blueBox.mouseleave(function() {
+  //  $(this).stop().fadeTo(500, 1);
+  //});
+
+  // hover(handlerIn, handlerOut)
+  blueBox.hover(function() {
+    $(this).stop().fadeTo(500, 0.7);
+  }, function() {
+    $(this).stop().fadeTo(500, 1);
+  });
+
 
 });
