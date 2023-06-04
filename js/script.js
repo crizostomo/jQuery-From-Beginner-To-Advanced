@@ -323,6 +323,7 @@ $(function() {
   }
   */
 
+  /**
   // Delegated Events
   //$("p").click(function() {
   //  $(this).slideUp();
@@ -337,5 +338,22 @@ $(function() {
   $("body").on("mouseenter", "li", function() {
     $(this).css("color", "#666");
   });  
+  */
+
+  // Passing Additional Data to Events
+  $("#btn-click").click({
+    user: "Diogo",
+    domain: "google.com"
+  }, function(event) {
+    greetUser(event.data);
+  });
+
+  function greetUser(userdata) {
+    username = userdata.user || "Annonymous";
+    domain = userdata.domain || "example.com";
+
+    alert("Welcome back " + username + " from " + domain + "!");
+  }
+
 
 });
