@@ -234,6 +234,7 @@ $(function() {
   console.log(firstPar.data("mydata"));
   */
 
+  /**
   // Retrieving and Changing the Content of an Element
   // text(), html()
   var firstPar = $("p:first");
@@ -245,5 +246,17 @@ $(function() {
   //firstPar.html("<strong>Hello</strong> World!")
 
   firstPar.html(firstPar.html() + " This was just appended");
+  */
+
+  // Adding Click Handlers
+  $("#btn-click").click(function(event) {
+    console.log(event);
+    alert("Button was clicked");
+  });
+
+  $(".red-box").click(function() {
+    $(this).fadeTo(500, 0.5);
+  });
+  $(".red.box").click();
 
 });
