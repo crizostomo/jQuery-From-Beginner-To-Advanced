@@ -547,5 +547,15 @@ $(function() {
     }
   }
 
+  // Fetching a Server File with jQuery
+  $("#code").load("js/script.js");
+
+  $("#code").load("example.js", function(response, status) {
+    if (status == "error") {
+      alert("Could not find file");
+    }
+    console.log(response);
+  });
+
 });
 
