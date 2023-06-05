@@ -397,6 +397,7 @@ $(function() {
   });
   */
 
+  /**
   // The Focus & Blur Events
   var inputFields = $("input:text, input:password, textarea");
   inputFields.focus(function() {
@@ -415,5 +416,21 @@ $(function() {
       $(this).css("box-shadow", "0 0 4px #181");
     }
   });
+  */
+
+  // Using the Change Event
+  $("#checkbox").change(function() {
+    var isChecked = $(this).is(":checked"); // .prop("checked")
+    if (isChecked) {
+      $(this).add("label[for='cb']").css("box-shadow", "0 0 4px #181");
+    } else {
+      $(this).add("label[for='cb']").css("box-shadow", "0 0 4px #811");
+    }
+  });
+
+  $("#selection").change(function() {
+    var selectedOption = $(this).find(":selected").text();
+    alert(selectedOption);
+  })
 
 });
