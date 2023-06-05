@@ -418,6 +418,7 @@ $(function() {
   });
   */
 
+  /**
   // Using the Change Event
   $("#checkbox").change(function() {
     var isChecked = $(this).is(":checked"); // .prop("checked")
@@ -432,5 +433,17 @@ $(function() {
     var selectedOption = $(this).find(":selected").text();
     alert(selectedOption);
   })
+  */
+
+  // Handling the Submit Event
+  $("#form").submit(function(event) {
+    var textarea = $("#message");
+    if (textarea.val().trim() == "") {
+      textarea.css("box-shadow", "0 0 4px #811");
+      event.preventDefault();
+    } else {
+
+    }
+  });
 
 });
